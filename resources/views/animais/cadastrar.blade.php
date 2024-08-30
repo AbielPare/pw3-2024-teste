@@ -5,7 +5,10 @@
 @section('titulo', 'Cadastrar | Animais para adoção')
 
 @section('conteudo')
-<p>Preencha o formulário</p>
+
+<p class="text-xl pb-6 flex items-center">
+    <i class="fas fa-list mr-3"></i> Preencha o formulário
+</p>
 
 @if($errors->any())
 <div>
@@ -16,12 +19,16 @@
 </div>  
 @endif
 
-<form method="post" action="{{ route('animais.gravar') }}">
+<div class="leading-loose">
+<form method="post" action="{{ route('animais.gravar') }}" class="p-10 bg-white rounded shadow-xl">
     @csrf
-    <input type="text" name="nome" placeholder="Nome" value="{{ old('nome') }}">
+        <label class="block text-sm text-gray-600" for="name">Name</label> 
+        <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" type="text" name="nome" placeholder="Nome" value="{{ old('nome') }}">
     <br>
-    <input type="number" name="idade" placeholder="Idade" value="{{ old('idade') }}">
+        <label class="block text-sm text-gray-600" for="email">Email</label>
+        <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" type="number" name="idade" placeholder="Idade" value="{{ old('idade') }}">
     <br>
     <input type="submit" value="Gravar">
 </form>
+</div>
 @endsection

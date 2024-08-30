@@ -41,7 +41,7 @@
                 Animais
             </a>
             @if (Auth::user() && Auth::user()['admin'])
-            <a href={{ route ('usuarios') }}" class="flex items-center text-white py-4 pl-6 nav-item  @if (Request::is('usuarios')) active-nav-link @else opacity-75 hover:opacity-100 @endif">
+            <a href={{ route ('usuarios') }} class="flex items-center text-white py-4 pl-6 nav-item  @if (Request::is('usuarios')) active-nav-link @else opacity-75 hover:opacity-100 @endif">
                 <i class="fas fa-dragon mr-3"></i>
                 Usuarios
             </a>

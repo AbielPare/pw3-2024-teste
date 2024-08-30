@@ -5,9 +5,6 @@
 @section('titulo', 'Cadastrar | Animais para adoção')
 
 @section('conteudo')
-<p>
-    <a href="{{ route('animais.cadastrar')}}" class="px-4 py-1 text-white font-light tracking-wider bg-blue-800 rounded"><i class="fas fa-plus mr-3">Cadastrar Animal</i></a>
-</p>
 
 @if($errors->any())
 <div>
